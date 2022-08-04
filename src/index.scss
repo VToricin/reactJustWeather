@@ -1,0 +1,23 @@
+@import './control-panel/control-panel.scss';
+@import './info-panel/info-panel.scss';
+@import './info-panel/cardContainer/cardContainer.scss';
+@import './info-panel/waiting/waiting.scss';
+
+body{
+    width: 100%;
+    margin: 0px auto;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+#root{
+    width: 100%;
+    margin: 0px auto;
+}
+
+.App{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}

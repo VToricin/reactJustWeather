@@ -1,0 +1,20 @@
+.infoPanel{
+    width: 75%;
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardSlider{
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.cardSlider__cardWrapper{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
