@@ -1,7 +1,12 @@
+$desktopWidth: 1024px;
+$ipadMiniWidth: 768px;
+
 @import './control-panel/control-panel.scss';
 @import './info-panel/info-panel.scss';
 @import './info-panel/cardContainer/cardContainer.scss';
 @import './info-panel/waiting/waiting.scss';
+@import './control-panel/location-search/location-search.scss';
+
 
 body{
     width: 100%;
@@ -20,4 +25,8 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    @media(max-width:$ipadMiniWidth) {
+        flex-direction: column;
+    }
 }

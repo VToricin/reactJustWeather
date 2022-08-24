@@ -12,12 +12,27 @@
 }
 
 .renderTypeButton {
-  width: 180px;
-  height: 30px;
+  width: 200px;
+  height: 60px;
   border: 0px;
-  border-radius: 4px;
-  background-color: white;
+  border-radius: 30px;
+  background-color: rgb(233, 233, 233);
   display: flex;
   align-items: center;
+  box-shadow: 0 0px 9px 0 rgba(95, 95, 95, 0.701);
   justify-content: center;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.renderTypeButton:hover {
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 0px 7px 0 rgba(128, 128, 128, 0.593);
+  transition: ease 0.3s;
+}
+
+.renderTypeButton:active {
+  background-color: white;
+  box-shadow: 0 0px 0px 0 rgba(151, 151, 151, 0.197);
+  transition: ease 0.3s;
 }/*# sourceMappingURL=control-panel.css.map */

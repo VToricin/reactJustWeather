@@ -5,16 +5,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width:$desktopWidth) {
+        width: 65%;
+    }
+
+    @media (max-width:$ipadMiniWidth) {
+        width: 100%;
+        height: fit-content;
+
+    }
+
 }
 
 .cardSlider{
     margin: 0px auto;
     overflow: hidden;
+    position: relative;
+    margin: 0px 10px;
+
+    @media (max-width:$ipadMiniWidth) {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        overflow: none;   
+    }
 }
 
 .cardSlider__cardWrapper{
     display: flex;
     flex-direction: row;
+    transition: 0.3s ease;
     
+    @media (max-width:$ipadMiniWidth) {
+        width: 100%;
+        height: fit-content;
+        
+        flex-direction: column;
+        
+    }
     
+}
+.slideButton{
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    background-color: aqua;
+}
+.cardSlider__nextButton{
+    right: 0px;
 }

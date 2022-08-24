@@ -1,4 +1,6 @@
 import React from "react";
+import CurrentDataString from "./cardDataComponents/currentDataString";
+import ShortCardInfo from "./CardElements/shortCardInfo";
 
 export default function CardContainer  (props)  {
 
@@ -6,10 +8,10 @@ export default function CardContainer  (props)  {
         case "current":
             return(
         
-                <div className="cardContainer">
-                    <div className="cardContainer__temp card__line">{Math.round(props.state.temp-273)}</div>
-                    <div className="cardContainer__humidity card__line">{props.state.humidity}</div>
-                    <div className="cardContainer__pressure card__line">{Math.round(props.state.pressure*0.750063755419211)}</div>
+                <div className="currentDataContainer">
+                    <ShortCardInfo state = {props.state}/>
+                    <CurrentDataString name='Влажность,' data = {props.state.humidity} symbol = '&#37;'/> 
+                    <CurrentDataString name='Давление,' data = {Math.round(props.state.pressure*0.750063755419211)} symbol = 'мм. рт.ст.'/>
                 </div>
             
         )
@@ -17,9 +19,10 @@ export default function CardContainer  (props)  {
             return(
         
                 <div className="cardContainer">
+                    
                     <div className="cardContainer__temp card__line">{Math.round(props.state.temp-273)}</div>
-                    <div className="cardContainer__humidity card__line">{props.state.humidity}</div>
-                    <div className="cardContainer__pressure card__line">{Math.round(props.state.pressure*0.750063755419211)}</div>
+                    <CurrentDataString name='Влажность,' data = {props.state.humidity} symbol = '&#37;'/> 
+                    <CurrentDataString name='Давление,' data = {Math.round(props.state.pressure*0.750063755419211)} symbol = 'мм. рт.ст.'/>
                 </div>
             
         )
@@ -28,8 +31,8 @@ export default function CardContainer  (props)  {
         
                 <div className="cardContainer">
                     <div className="cardContainer__temp card__line">{Math.round(props.state.temp-273)}</div>
-                    <div className="cardContainer__humidity card__line">{props.state.humidity}</div>
-                    <div className="cardContainer__pressure card__line">{Math.round(props.state.pressure*0.750063755419211)}</div>
+                    <CurrentDataString name='Влажность,' data = {props.state.humidity} symbol = '&#37;'/> 
+                    <CurrentDataString name='Давление,' data = {Math.round(props.state.pressure*0.750063755419211)} symbol = 'мм. рт.ст.'/>
                 </div>
             
         )

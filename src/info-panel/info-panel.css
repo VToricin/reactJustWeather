@@ -5,13 +5,33 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 990px) {
+  .infoPanel {
+    width: 65%;
+  }
+}
 
 .cardSlider {
   margin: 0px auto;
   overflow: hidden;
+  position: relative;
+  margin: 0px 10px;
 }
 
 .cardSlider__cardWrapper {
   display: flex;
   flex-direction: row;
+  transition: 0.3s ease;
+}
+
+.slideButton {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.cardSlider__nextButton {
+  right: 0px;
 }/*# sourceMappingURL=info-panel.css.map */

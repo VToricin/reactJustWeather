@@ -6,20 +6,51 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  min-width: 250px;
+  min-width: 300px;
   background-color: gainsboro;
   border-radius: 0px 30px 30px 0px;
 }
+@media (max-width: 1024px) {
+  .controlPanel {
+    min-width: 300px;
+    width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .controlPanel {
+    height: 400px;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 0px 0px 30px 30px;
+  }
+}
 
 .renderTypeButton {
-  width: 180px;
-  height: 30px;
+  width: 200px;
+  height: 60px;
   border: 0px;
-  border-radius: 4px;
-  background-color: white;
+  border-radius: 30px;
+  background-color: rgb(233, 233, 233);
   display: flex;
   align-items: center;
+  border: 1px solid rgb(194, 194, 194);
   justify-content: center;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.renderTypeButton:hover {
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 0px 7px 0 rgba(128, 128, 128, 0.593);
+  transition: ease 0.3s;
+  border: 1px solid rgb(250, 250, 250);
+}
+
+.renderTypeButton:active {
+  background-color: white;
+  box-shadow: 0 0px 0px 0 rgba(151, 151, 151, 0.197);
+  transition: ease 0.3s;
+  border: 1px solid white;
 }
 
 .infoPanel {
@@ -29,15 +60,63 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1024px) {
+  .infoPanel {
+    width: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .infoPanel {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 
 .cardSlider {
   margin: 0px auto;
   overflow: hidden;
+  position: relative;
+  margin: 0px 10px;
+}
+@media (max-width: 768px) {
+  .cardSlider {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: none;
+  }
 }
 
 .cardSlider__cardWrapper {
   display: flex;
   flex-direction: row;
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .cardSlider__cardWrapper {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-direction: column;
+  }
+}
+
+.slideButton {
+  position: absolute;
+  top: 45%;
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.cardSlider__nextButton {
+  right: 0px;
 }
 
 .cardContainer {
@@ -52,12 +131,79 @@
   box-shadow: 0 0px 9px 0 rgba(151, 151, 151, 0.14);
 }
 
+.currentDataContainer {
+  font-size: 25px;
+  margin: 10px;
+  min-width: 250px;
+  height: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.currentDataContainer__temp {
+  font-size: 60px;
+  text-align: right;
+  width: 100%;
+}
+.currentDataContainer__humidity {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card__line {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.shortCardInfo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .waiting__container {
   width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.citySearchField {
+  width: 150px;
+  height: 20px;
+  border: 5px solid white;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.locationSearch__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.locationSearch__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
 }
 
 body {
@@ -78,4 +224,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -7,21 +7,49 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    min-width: 250px;
+    min-width: 300px;
     background-color: gainsboro;
     border-radius: 0px 30px 30px 0px;
+
+    @media(max-width:$desktopWidth) {
+        min-width: 300px;
+        width: 35%;
+    }
+
+    @media(max-width:$ipadMiniWidth) {
+        
+        height: 400px;
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: 0px 0px 30px 30px;
+    }
 
 }
 
 .renderTypeButton {
-    width: 180px;
-    height: 30px;
+    width: 200px;
+    height: 60px;
     border: 0px;
-    border-radius: 4px;
-    background-color: white;
-    
+    border-radius: 30px;
+    background-color: rgb(233, 233, 233);
     display: flex;
     align-items: center;
+    border: 1px solid rgb(194 194 194);
     justify-content: center;
+    transition: ease 0.3s;
+    cursor: pointer;
     
+}
+.renderTypeButton:hover{
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0px 7px 0 rgba(128, 128, 128, 0.593);
+    transition: ease 0.3s;
+    border: 1px solid rgb(250, 250, 250);;
+    
+}
+.renderTypeButton:active{
+    background-color: white;
+    box-shadow: 0 0px 0px 0 rgba(151, 151, 151, 0.197);
+    transition: ease 0.3s;
+    border: 1px solid white;
 }
