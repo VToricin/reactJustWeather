@@ -22,7 +22,7 @@
     margin: 0px auto;
     overflow: hidden;
     position: relative;
-    margin: 0px 10px;
+    margin: 0px 0px;
 
     @media (max-width:$ipadMiniWidth) {
         width: 100%;
@@ -49,11 +49,45 @@
 }
 .slideButton{
     position: absolute;
-    top: 45%;
-    width: 40px;
-    height: 40px;
-    background-color: aqua;
+    top: 40%;
+    width: 30px;
+    height: 60px;
+    background-color: #dcdcdc;
+    transition: ease-in 0.3s;
+    opacity: 0.7;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    @media (max-width:$ipadMiniWidth) {
+        visibility: hidden;
+        
+    }
+}
+
+
+
+.slideButton:hover{
+    opacity: 1;
+    transition: ease-in 0.3s;
+    border: 4px solid #dcdcdc;
+    
+    
 }
 .cardSlider__nextButton{
     right: 0px;
+}
+.cardSlider__nextButton:hover{
+    
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cardSlider__prevButton{
+    left: 0px;
+}
+.cardSlider__prevButton:hover{
+    border-radius: 0px 10px 10px 0px;
 }
