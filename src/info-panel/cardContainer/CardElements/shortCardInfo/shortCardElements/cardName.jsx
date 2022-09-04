@@ -18,7 +18,7 @@ export default function CardName (props) {
             console.log(timeNow)
             
                 return (
-                    <div className="CardName">
+                    <div className="shortCardInfo__data CardName">
                          {timeNowString}:00
                     </div>
                 );
@@ -37,7 +37,7 @@ export default function CardName (props) {
 
             
                 return (
-                    <div className="CardName">
+                    <div className="shortCardInfo__data CardName">
                         {timeNow.toLocaleString("ru", options)}
                     </div>
                 );

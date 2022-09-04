@@ -74,7 +74,7 @@ getUserCoords();
 
 export function getSearchCoords (argument) {
     argument = argument.toLowerCase();
-    let SearchCordinates = 'asshole';
+    let SearchCordinates = '';
     RussianCities.forEach(elem=>{
       
         if (argument === elem.name.toLowerCase()) {
@@ -84,11 +84,19 @@ export function getSearchCoords (argument) {
        
     })
 
+    if (SearchCordinates === ''){
+        alert ('Я пока знаю только российские города, но этого не нашел. Может есть ошибка в названии?')
+        SearchCordinates = ProjectState.initialstate.currentCords;
+    } 
+
     if (!ProjectState[`${SearchCordinates}`]){
       ProjectState[`${SearchCordinates}`] = {};
       dataFetcher(SearchCordinates);
       console.log(`success`);
-    } else {
+    } else if(SearchCordinates === ProjectState.initialstate.currentCords){
+      dataFetcher(SearchCordinates);
+      console.log(`city name error`);
+    }else{
       ProjectState.cords = SearchCordinates;
       ProjectState.initialstate.currentCords = ProjectState.cords;
       

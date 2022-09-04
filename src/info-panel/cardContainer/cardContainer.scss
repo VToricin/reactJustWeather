@@ -1,5 +1,5 @@
 .cardContainer{
-    margin: 10px;
+    margin: 0px 10px;
     min-width: 250px;
     height: 100vh;
     border-radius: 5px;
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 0px 9px 0 rgb(151 151 151 / 14%);
+    box-sizing: border-box;
     @media(max-width:$ipadMiniWidth) {
         height: 50px;
         min-width: 100%;

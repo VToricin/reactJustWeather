@@ -13,25 +13,46 @@ export default function InfoPanel (props) {
     let dailyObject = props.state[currentCords].daily;
     let cardWrapper = React.createRef();
     let timeOffset = props.state[currentCords].timezone_offset;
-    console.log(timeOffset)
+    console.log(timeOffset);
+    
     const [offsetH, setOffsetH] = useState(0); //offset X for hourly data
-    const [offsetD, setOffsetD] = useState(0); //offset X for daily data
-
+    /* const [offsetD, setOffsetD] = useState(0); //offset X for daily data */
+    
     let sliderScroller = (sliderOffset, type) => {
-         if (type === "H"){           
-            setOffsetH(() => {
-                const newOne = offsetH - sliderOffset;
-                console.log(newOne)
-                return newOne;
-            })
-         }else{   
-            setOffsetD(() => {
-                const newOne = offsetD - sliderOffset;
-                console.log(newOne)
-                return newOne;
-            })
-        }   
+        if (offsetH<=0){
+            /* if (type === "H"){ */           
+                setOffsetH(() => {
+                    let newOne = offsetH - sliderOffset;
+                        if(newOne>0){
+                            console.log(newOne)
+                            newOne = 0;
+                        }
+                    return newOne;
+                    
+                    
+                })
+            
+                /* }else{   
+                setOffsetD(() => {
+                    const newOne = offsetD - sliderOffset;
+                    console.log(newOne)
+                    return newOne;
+                })
+            } */   
+        }
+    }    
+
+    let contentBuilder = () => {
+       
+        if (props.state.renderType === true){
+            
+            return hourlyObject.map(el => <CardContainer state = {el} cardType = {"hourly"} timeOffset = {timeOffset} cardID = {hourlyObject.indexOf(el)}/>)
+        } else {
+            
+            return dailyObject.map(el => <CardContainer state = {el} cardType = {"daily"} timeOffset = {timeOffset} cardID = {dailyObject.indexOf(el)}/>)
+        }
     }
+
 
 
 
@@ -41,14 +62,14 @@ export default function InfoPanel (props) {
         )
     }else{
 
-    if (props.state.renderType === true){
+    
                 return (
                     <div className = "infoPanel">
                         <div className = "cardSlider">
                             
                                 <div ref = {cardWrapper} className="cardSlider__cardWrapper" style = {{transform: `translateX(${offsetH}px)`}}>
                                     
-                                    {hourlyObject.map(el => <CardContainer state = {el} cardType = {"hourly"} timeOffset = {timeOffset} cardID = {hourlyObject.indexOf(el)}/>)}
+                                    {contentBuilder()}
                                     
                                 </div>
                             <div className = "cardSlider__prevButton slideButton" onClick = {() => {sliderScroller(-300, "H")}}>{"<"}</div>
@@ -56,7 +77,7 @@ export default function InfoPanel (props) {
                         </div>
                     </div>
                 )
-    }else{
+    /* else{
         return (
             <div className = "infoPanel">
                 <div className = "cardSlider">
@@ -70,7 +91,7 @@ export default function InfoPanel (props) {
                 </div>
             </div>
         )
-    }  
+    }   */
         
         
         
