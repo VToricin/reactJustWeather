@@ -10,7 +10,8 @@ export default function ShortCardInfo (props) {
         <div className="shortCardInfo">
             <CardName cardType = {props.cardType} timeOffset = {props.timeOffset} cardID = {props.cardID}/>
             <IconCreate state = {props.state.weather[0].icon} cardType = {props.cardType}/>
-            <CurrentTemp state = {props.state} cardType = {props.cardType}/>
+            <CurrentTemp state = {props.state} cardType = {props.cardType} cardHeigthExtend = {props.cardHeigthExtend}/>
+            
         </div>
     )
 }

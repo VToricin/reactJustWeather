@@ -1,48 +1,63 @@
 import React from "react";
 import { useState } from "react";
 import CardContainer  from "./cardContainer/cardContainer";
-import Waiting from "./waiting/waiting";
+
+
+
 
 
 export default function InfoPanel (props) {
     
-    console.log(props.state);
-    let currentCords = props.state.currentCords;
-    let hourlyObject = props.state[currentCords].hourly;
-    hourlyObject.length = 12;
-    let dailyObject = props.state[currentCords].daily;
-    let cardWrapper = React.createRef();
-    let timeOffset = props.state[currentCords].timezone_offset;
-    console.log(timeOffset);
     
-    const [offsetH, setOffsetH] = useState(0); //offset X for hourly data
-    /* const [offsetD, setOffsetD] = useState(0); //offset X for daily data */
+    let currentCords = props.state.currentCords;  
+    let hourlyObject = props.state[currentCords].hourly; // выборка данных по данным координатам по часам
+    hourlyObject.length = 24;  // определение количества карточек для выборки "по часам"
+    let dailyObject = props.state[currentCords].daily;  // выборка данных по данным координатам по дням
+    let cardWrapper = React.createRef();  // ссылка на родительский контейнер для карточек с данными 
     
-    let sliderScroller = (sliderOffset, type) => {
+    let timeOffset = props.state[currentCords].timezone_offset; // часовой пояс точки, координаты которой фетчатся
+    
+    
+    const [offsetH, setOffsetH] = useState(0); //юз-стейт для слайдера с карточками при десктопной отрисовке 
+    
+    
+    
+    let sliderScroller = (sliderOffset, type) => {   // функция для определения сдвига окна с информацией при нажатии кнопок слайдера
         if (offsetH<=0){
-            /* if (type === "H"){ */           
+                      
                 setOffsetH(() => {
                     let newOne = offsetH - sliderOffset;
+                    let cardWrapperScreenParams = cardWrapper.current.getBoundingClientRect();
+                    let WrapperMaxWidth = 0;
+                    function WrapperMaxWidthCounter () {
+                        if(type === true) {
+                            WrapperMaxWidth = cardWrapperScreenParams.width - (hourlyObject.length * 320);
+                           // debugger;
+                        } else {
+                            WrapperMaxWidth = cardWrapperScreenParams.width - (dailyObject.length * 320);
+                        }
+                    }
+
+                    WrapperMaxWidthCounter();
+                   
                         if(newOne>0){
-                            console.log(newOne)
                             newOne = 0;
                         }
+
+                        else if (newOne<WrapperMaxWidth) {
+                            newOne = WrapperMaxWidth;
+                        }
+                        
                     return newOne;
                     
                     
                 })
             
-                /* }else{   
-                setOffsetD(() => {
-                    const newOne = offsetD - sliderOffset;
-                    console.log(newOne)
-                    return newOne;
-                })
-            } */   
+                  
         }
     }    
 
-    let contentBuilder = () => {
+    let contentBuilder = () => { // функция выбора набора карточек дневных или часовых в зависимости от параметров в стейте
        
         if (props.state.renderType === true){
             
@@ -56,14 +71,10 @@ export default function InfoPanel (props) {
 
 
 
-    if (hourlyObject === undefined){
-        return (
-            <Waiting/>
-        )
-    }else{
+   
 
     
-                return (
+                return ( // построение интерфейса инфопанели
                     <div className = "infoPanel">
                         <div className = "cardSlider">
                             
@@ -72,28 +83,14 @@ export default function InfoPanel (props) {
                                     {contentBuilder()}
                                     
                                 </div>
-                            <div className = "cardSlider__prevButton slideButton" onClick = {() => {sliderScroller(-300, "H")}}>{"<"}</div>
-                            <div className = "cardSlider__nextButton slideButton" onClick = {() => {sliderScroller(300, "H")}}>{">"}</div>
+                            <div className = "cardSlider__prevButton slideButton" onClick = {() => {sliderScroller(-450, props.state.renderType)}}>{"<"}</div>
+                            <div className = "cardSlider__nextButton slideButton" onClick = {() => {sliderScroller(450, props.state.renderType)}}>{">"}</div>
                         </div>
                     </div>
                 )
-    /* else{
-        return (
-            <div className = "infoPanel">
-                <div className = "cardSlider">
-                    <div className = "cardSlider__cardWrapper " style = {{transform: `translateX(${offsetD}px)`}}>
-                        
-                        {dailyObject.map(el => <CardContainer state = {el} cardType = {"daily"} timeOffset = {timeOffset} cardID = {dailyObject.indexOf(el)}/>)}
-            
-                    </div>
-                    <div className = "cardSlider__prevButton slideButton" onClick = {() => {sliderScroller(-300, "D")}}>{"<"}</div>
-                    <div className = "cardSlider__nextButton slideButton" onClick = {() => {sliderScroller(300, "D")}}>{">"}</div>
-                </div>
-            </div>
-        )
-    }   */
+    
         
         
         
-    }    
+      
 }

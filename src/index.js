@@ -8,6 +8,7 @@ import {ProjectState} from "./state/state";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function appRender (props) {
+  console.log(props)
     root.render(
       <React.StrictMode>
         <App state = {props}/>

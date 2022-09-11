@@ -3,7 +3,7 @@ import {RussianCities} from "./russianCitiesArray";
 
 export let ProjectState = {
     initialstate:{
-      currentCords: '',
+      currentCords: '!',
       renderType: false
     },
     
