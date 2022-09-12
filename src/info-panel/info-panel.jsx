@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CardContainer  from "./cardContainer/cardContainer";
-
+import Waiting from "./waiting/waiting";
 
 
 
@@ -9,7 +9,20 @@ import CardContainer  from "./cardContainer/cardContainer";
 export default function InfoPanel (props) {
     
     
-    let currentCords = props.state.currentCords;  
+    const [offsetH, setOffsetH] = useState(0); //юз-стейт для слайдера с карточками при десктопной отрисовке 
+
+
+
+
+   
+       if (props.state.currentCords === '!') {
+            return (
+                <div className = "infoPanel">
+                    <Waiting/>
+                </div>
+            )    
+        } else {
+            let currentCords = props.state.currentCords;  
     let hourlyObject = props.state[currentCords].hourly; // выборка данных по данным координатам по часам
     hourlyObject.length = 24;  // определение количества карточек для выборки "по часам"
     let dailyObject = props.state[currentCords].daily;  // выборка данных по данным координатам по дням
@@ -18,7 +31,7 @@ export default function InfoPanel (props) {
     let timeOffset = props.state[currentCords].timezone_offset; // часовой пояс точки, координаты которой фетчатся
     
     
-    const [offsetH, setOffsetH] = useState(0); //юз-стейт для слайдера с карточками при десктопной отрисовке 
+    
     
     
     
@@ -67,14 +80,8 @@ export default function InfoPanel (props) {
             return dailyObject.map(el => <CardContainer state = {el} cardType = {"daily"} timeOffset = {timeOffset} cardID = {dailyObject.indexOf(el)}/>)
         }
     }
-
-
-
-
-   
-
-    
-                return ( // построение интерфейса инфопанели
+            
+            return ( // построение интерфейса инфопанели
                     <div className = "infoPanel">
                         <div className = "cardSlider">
                             
@@ -88,8 +95,8 @@ export default function InfoPanel (props) {
                         </div>
                     </div>
                 )
-    
-        
+
+        }
         
         
       

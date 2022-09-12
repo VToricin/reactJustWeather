@@ -151,6 +151,13 @@
   border-radius: 0px 10px 10px 0px;
 }
 
+.noLocation {
+  width: 90%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .cardContainer {
   margin: 0px 10px;
   min-width: 300px;
@@ -342,14 +349,34 @@
   border: 1px grey solid;
   background-color: white;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .fieldName {
   margin: 10px;
   color: rgb(87, 87, 87);
+}
+
+.dotDiv {
+  background-color: black;
+  border-radius: 1.5px;
+  height: 3px;
+  width: 3px;
+  position: absolute;
+  top: 45%;
+}
+.dotDiv__left {
+  left: 25%;
+  transform: rotateZ(45deg);
+  transition: 0.3s ease-out;
+}
+.dotDiv__mid {
+  left: 45%;
+}
+.dotDiv__right {
+  left: 65%;
+  transform: rotateZ(-45deg);
+  transition: 0.3s ease-out;
 }
 
 body {

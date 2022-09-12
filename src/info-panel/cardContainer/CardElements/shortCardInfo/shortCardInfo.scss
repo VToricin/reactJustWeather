@@ -88,12 +88,36 @@
     border: 1px grey solid;
     background-color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    position:relative;
 }
 
 .fieldName {
     margin: 10px;
     color: rgb(87, 87, 87);
+}
+
+
+.dotDiv { // 
+    background-color: black;
+    border-radius: 1.5px;
+    height: 3px;
+    width: 3px;
+    position:absolute;
+    top: 45%;
+    &__left{
+        left: 25%;
+        transform: rotateZ(45deg);
+        transition: 0.3s ease-out;
+    }
+
+    &__mid{
+        left: 45%;
+    }
+
+    &__right{
+        left: 65%;
+        transform: rotateZ(-45deg);
+        transition: 0.3s ease-out;
+    }
 }

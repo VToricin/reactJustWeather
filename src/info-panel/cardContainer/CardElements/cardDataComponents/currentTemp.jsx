@@ -1,5 +1,5 @@
 import React from "react";
-
+import AdditionalInfoButton from "./additionalInfoButton";
 
 export default function CurrentTemp (props) {
 
@@ -15,7 +15,7 @@ export default function CurrentTemp (props) {
         return (
             <div className="shortCardInfo__data temp__button_parent">
                 <div className="smallFontSize__temp">{Math.round(props.state.temp-273)}&deg;</div>
-                <div className="fullCardInfoOpen" onClick={props.cardHeigthExtend}><div className="fullCardButton">{'...'}</div></div>
+                <AdditionalInfoButton cardHeigthExtend = {props.cardHeigthExtend}/>
             </div>
         )
     } else {
@@ -25,7 +25,7 @@ export default function CurrentTemp (props) {
         return (
             <div className="shortCardInfo__data temp__button_parent">
                 <div className="smallFontSize__temp">{dayTemp}&deg; / {nightTemp} &deg;</div>    
-                <div className="fullCardInfoOpen" onClick={props.cardHeigthExtend}><div className="fullCardButton">{'...'}</div></div>
+                <AdditionalInfoButton cardHeigthExtend = {props.cardHeigthExtend}/>
             </div>
         )
     }
