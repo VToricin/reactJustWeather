@@ -74,6 +74,21 @@ getUserCoords();
 
 export function getSearchCoords (argument) {
     argument = argument.toLowerCase();
+    argument = argument.split('');
+    let argumentFormating = () => {
+      if (argument[argument.length-1] === ' '){
+        argument.splice(argument.length-1,1);
+        argumentFormating();
+
+      }
+      if (argument[0] === ' '){
+        argument.splice(argument[0],1);
+        argumentFormating();
+
+      }
+    };
+    argumentFormating();
+    argument = argument.join('').toString();  
     let SearchCordinates = '';
     RussianCities.forEach(elem=>{
       

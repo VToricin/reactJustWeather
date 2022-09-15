@@ -2461,7 +2461,7 @@ export let RussianCities = [
     },
     {
         "id": 466798,
-        "name": "Юбилеыный",
+        "name": "Юбилейный",
         "state": "",
         "country": "RU",
         "coord": {
@@ -2471,7 +2471,7 @@ export let RussianCities = [
     },
     {
         "id": 466806,
-        "name": "Ыошкар-ола",
+        "name": "Йошкар-ола",
         "state": "",
         "country": "RU",
         "coord": {
@@ -2481,7 +2481,7 @@ export let RussianCities = [
     },
     {
         "id": 466885,
-        "name": "Еыск",
+        "name": "Ейск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -2881,7 +2881,7 @@ export let RussianCities = [
     },
     {
         "id": 467787,
-        "name": "Ыëлкино",
+        "name": "ëлкино",
         "state": "",
         "country": "RU",
         "coord": {
@@ -4671,7 +4671,7 @@ export let RussianCities = [
     },
     {
         "id": 471855,
-        "name": "Вороньыë",
+        "name": "Вороньë",
         "state": "",
         "country": "RU",
         "coord": {
@@ -4841,7 +4841,7 @@ export let RussianCities = [
     },
     {
         "id": 472079,
-        "name": "Воробьыово",
+        "name": "Воробьёво",
         "state": "",
         "country": "RU",
         "coord": {
@@ -4851,7 +4851,7 @@ export let RussianCities = [
     },
     {
         "id": 472088,
-        "name": "Воробьыëво",
+        "name": "Воробьево",
         "state": "",
         "country": "RU",
         "coord": {
@@ -4861,7 +4861,7 @@ export let RussianCities = [
     },
     {
         "id": 472113,
-        "name": "Воробьыëвка",
+        "name": "Воробьëвка",
         "state": "",
         "country": "RU",
         "coord": {
@@ -30721,7 +30721,7 @@ export let RussianCities = [
     },
     {
         "id": 524901,
-        "name": "Мосcоw",
+        "name": "Москва",
         "state": "",
         "country": "RU",
         "coord": {
@@ -30731,7 +30731,7 @@ export let RussianCities = [
     },
     {
         "id": 524906,
-        "name": "Московскоjе",
+        "name": "Московское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -36261,7 +36261,7 @@ export let RussianCities = [
     },
     {
         "id": 536203,
-        "name": "Саинт петерсбург",
+        "name": "Санкт-петербург",
         "state": "",
         "country": "RU",
         "coord": {
@@ -36271,7 +36271,7 @@ export let RussianCities = [
     },
     {
         "id": 536206,
-        "name": "Юбилеыны",
+        "name": "Юбилейны",
         "state": "",
         "country": "RU",
         "coord": {
