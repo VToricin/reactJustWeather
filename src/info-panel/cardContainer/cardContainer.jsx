@@ -14,7 +14,8 @@ export default function CardContainer  (props)  {
         setMobileCardHeight(()=>{
             
             if (MobileCardHeight === "MobileCardHeightClosed") {
-                return "MobileCardHeightOpened";
+
+                return "MobileCardHeightOpened OpenedActive";
             } else {
                 return "MobileCardHeightClosed";
             }
