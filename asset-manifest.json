@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/reactJustWeather/static/css/main.13cab869.css",
-    "main.js": "/reactJustWeather/static/js/main.2bd02422.js",
-    "static/js/787.2aecf812.chunk.js": "/reactJustWeather/static/js/787.2aecf812.chunk.js",
-    "index.html": "/reactJustWeather/index.html",
-    "main.13cab869.css.map": "/reactJustWeather/static/css/main.13cab869.css.map",
-    "main.2bd02422.js.map": "/reactJustWeather/static/js/main.2bd02422.js.map",
-    "787.2aecf812.chunk.js.map": "/reactJustWeather/static/js/787.2aecf812.chunk.js.map"
+    "main.css": "//whiitered.store/static/css/main.13cab869.css",
+    "main.js": "//whiitered.store/static/js/main.ee3b8893.js",
+    "static/js/787.2aecf812.chunk.js": "//whiitered.store/static/js/787.2aecf812.chunk.js",
+    "index.html": "//whiitered.store/index.html",
+    "main.13cab869.css.map": "//whiitered.store/static/css/main.13cab869.css.map",
+    "main.ee3b8893.js.map": "//whiitered.store/static/js/main.ee3b8893.js.map",
+    "787.2aecf812.chunk.js.map": "//whiitered.store/static/js/787.2aecf812.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13cab869.css",
-    "static/js/main.2bd02422.js"
+    "static/js/main.ee3b8893.js"
   ]
 }
