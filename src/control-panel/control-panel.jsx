@@ -6,6 +6,7 @@ import NoLocation from "../info-panel/loading/noLocation";
 
 
 export default function ControlPanel (props){
+    
     let currentCords = props.state.currentCords;
     console.log(props.state)
 
@@ -14,7 +15,7 @@ export default function ControlPanel (props){
             return (
                 <>
                     <NoLocation/>
-                    <LocationSearch />
+                    <LocationSearch state = {props.state.cityField}/>
                 </>
             )
             
@@ -24,7 +25,7 @@ export default function ControlPanel (props){
                 <>
                     <CardContainer state = {props.state[currentCords].current} cardType = "current"/>
                     {RenderTypeButton (props.state.renderType)}
-                    <LocationSearch />
+                    <LocationSearch state = {props.state.cityField}/>
                 </>
             )
         }

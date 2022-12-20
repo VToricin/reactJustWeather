@@ -1,10 +1,11 @@
 import {RussianCities} from "./russianCitiesArray";
-
+/*  import {modo} from "./cityList" ; */
 
 export let ProjectState = {
     initialstate:{
       currentCords: '!',
-      renderType: false
+      renderType: false,
+      cityField: 'Выберите город...'
     },
     
     stateUpdater(){
@@ -13,6 +14,10 @@ export let ProjectState = {
     eventHandler(props){
         
         this.stateUpdater = props; 
+    },
+
+    initialStateCityFieldSetter(){
+      
     },
     cords: '',
     renderType: true
@@ -54,6 +59,8 @@ function dataFetcher (cords) {
      ProjectState.initialstate[cords] = data;
      ProjectState.initialstate.currentCords = cords;
      ProjectState[cords] = data;
+
+     
      ProjectState.stateUpdater(ProjectState.initialstate);
     })
 }
@@ -65,8 +72,31 @@ function getUserCoords () {
       
         ProjectState.cords = `lat=${latitude}&lon=${longitude}`
         console.log(ProjectState.cords);
-        ProjectState[`lat=${latitude}&lon=${longitude}`] = 
-        dataFetcher(ProjectState.cords)
+        
+        RussianCities.forEach(el=>{
+          let latChecker =  el['coord'].lat.toString();
+          if (latChecker.length > 6) {latChecker = latChecker.slice(0, -(latChecker.length - 6))} 
+          let newLatitude = latitude.toString();
+          if (newLatitude.length > 6) {newLatitude = newLatitude.slice(0, -(newLatitude.length - 6))}
+
+            if(latChecker === newLatitude) {
+              console.log('lat success');
+              let longChecker = el['coord'].lon.toString();
+              if (longChecker.length > 6) {longChecker = longChecker.slice(0, longChecker.length - 6)}
+              let newLongitude = longitude.toString();
+              if (newLongitude.length > 6) {newLongitude = newLongitude.slice(0, newLongitude.length - 6)}
+
+                if(longChecker === newLongitude) {
+                  console.log('lon success');
+                  ProjectState.initialstate.cityField = el['name'];
+                  console.log(el['name']);
+
+                }
+            }
+        })
+
+        ProjectState[`lat=${latitude}&lon=${longitude}`] = dataFetcher(ProjectState.cords);
+        
 
     })
 }
@@ -108,10 +138,10 @@ export function getSearchCoords (argument) {
       ProjectState[`${SearchCordinates}`] = {};
       dataFetcher(SearchCordinates);
       console.log(`success`);
-    } else if(SearchCordinates === ProjectState.initialstate.currentCords){
+    } else if (SearchCordinates === ProjectState.initialstate.currentCords){
       dataFetcher(SearchCordinates);
       console.log(`city name error`);
-    }else{
+    } else {
       ProjectState.cords = SearchCordinates;
       ProjectState.initialstate.currentCords = ProjectState.cords;
       
