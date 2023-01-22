@@ -59,7 +59,7 @@ function dataFetcher (cords) {
      ProjectState.initialstate[cords] = data;
      ProjectState.initialstate.currentCords = cords;
      ProjectState[cords] = data;
-
+     console.log(data) 
      
      ProjectState.stateUpdater(ProjectState.initialstate);
     })
@@ -75,16 +75,16 @@ function getUserCoords () {
         
         RussianCities.forEach(el=>{
           let latChecker =  el['coord'].lat.toString();
-          if (latChecker.length > 6) {latChecker = latChecker.slice(0, -(latChecker.length - 6))} 
+          if (latChecker.length > 5) {latChecker = latChecker.slice(0, -(latChecker.length - 5))} 
           let newLatitude = latitude.toString();
-          if (newLatitude.length > 6) {newLatitude = newLatitude.slice(0, -(newLatitude.length - 6))}
+          if (newLatitude.length > 5) {newLatitude = newLatitude.slice(0, -(newLatitude.length - 5))}
 
             if(latChecker === newLatitude) {
               console.log('lat success');
               let longChecker = el['coord'].lon.toString();
-              if (longChecker.length > 6) {longChecker = longChecker.slice(0, longChecker.length - 6)}
+              if (longChecker.length > 5) {longChecker = longChecker.slice(0, longChecker.length - 5)}
               let newLongitude = longitude.toString();
-              if (newLongitude.length > 6) {newLongitude = newLongitude.slice(0, newLongitude.length - 6)}
+              if (newLongitude.length > 5) {newLongitude = newLongitude.slice(0, newLongitude.length - 5)}
 
                 if(longChecker === newLongitude) {
                   console.log('lon success');

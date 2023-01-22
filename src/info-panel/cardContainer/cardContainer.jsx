@@ -29,7 +29,7 @@ export default function CardContainer  (props)  {
         
                 <div className="currentDataContainer" >
                     <ShortCardInfo state = {props.state} cardType = {"current"} timeOffset = {props.timeOffset} cardID = {props.cardID} cardHeigthExtend = {cardHeigthExtend}/>
-                    <CurrentDataString name='Ощущается как' data = {Math.round(props.state.temp-273)} symbol = '&deg;'/> 
+                    <CurrentDataString name='Ощущается как' data = {Math.round(props.state.feels_like-273)} symbol = '&deg;'/> 
                     <CurrentDataString name = 'Скорость ветра' data = {props.state.wind_speed} symbol = 'м.с'/>
                     <CurrentDataString name = 'Влажность' data = {props.state.humidity} symbol = '&#37;'/>
                 </div>

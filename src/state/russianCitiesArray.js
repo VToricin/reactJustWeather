@@ -3831,7 +3831,7 @@ export let RussianCities = [
     },
     {
         "id": 469991,
-        "name": "Высоцкое",
+        "name": "Высотское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -4201,7 +4201,7 @@ export let RussianCities = [
     },
     {
         "id": 470734,
-        "name": "Вяцкие поляны",
+        "name": "Вятские поляны",
         "state": "",
         "country": "RU",
         "coord": {
@@ -8521,7 +8521,7 @@ export let RussianCities = [
     },
     {
         "id": 479613,
-        "name": "Удмурцкая республика",
+        "name": "Удмуртская республика",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13471,7 +13471,7 @@ export let RussianCities = [
     },
     {
         "id": 489990,
-        "name": "Совецкое",
+        "name": "Советское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13481,7 +13481,7 @@ export let RussianCities = [
     },
     {
         "id": 489994,
-        "name": "Совецкое",
+        "name": "Советское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13521,7 +13521,7 @@ export let RussianCities = [
     },
     {
         "id": 490039,
-        "name": "Совецкий",
+        "name": "Советский",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13531,7 +13531,7 @@ export let RussianCities = [
     },
     {
         "id": 490040,
-        "name": "Совецкий",
+        "name": "Советский",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13541,7 +13541,7 @@ export let RussianCities = [
     },
     {
         "id": 490064,
-        "name": "Совецкая",
+        "name": "Советская",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13551,7 +13551,7 @@ export let RussianCities = [
     },
     {
         "id": 490065,
-        "name": "Совецкая",
+        "name": "Советская",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13561,7 +13561,7 @@ export let RussianCities = [
     },
     {
         "id": 490066,
-        "name": "Совецкая",
+        "name": "Советская",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13571,7 +13571,7 @@ export let RussianCities = [
     },
     {
         "id": 490067,
-        "name": "Совецк",
+        "name": "Советск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13581,7 +13581,7 @@ export let RussianCities = [
     },
     {
         "id": 490068,
-        "name": "Совецк",
+        "name": "Советск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -13591,7 +13591,7 @@ export let RussianCities = [
     },
     {
         "id": 490069,
-        "name": "Совецк",
+        "name": "Советск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -14091,7 +14091,7 @@ export let RussianCities = [
     },
     {
         "id": 491075,
-        "name": "Солдацкая письмянка",
+        "name": "Солдатская письмянка",
         "state": "",
         "country": "RU",
         "coord": {
@@ -14101,7 +14101,7 @@ export let RussianCities = [
     },
     {
         "id": 491079,
-        "name": "Солдацкая",
+        "name": "Солдатская",
         "state": "",
         "country": "RU",
         "coord": {
@@ -27161,7 +27161,7 @@ export let RussianCities = [
     },
     {
         "id": 517917,
-        "name": "Новосолдацкая",
+        "name": "Новосолдатская",
         "state": "",
         "country": "RU",
         "coord": {
@@ -29261,7 +29261,7 @@ export let RussianCities = [
     },
     {
         "id": 522103,
-        "name": "Никицкое",
+        "name": "Никитское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -29271,7 +29271,7 @@ export let RussianCities = [
     },
     {
         "id": 522104,
-        "name": "Никицкое",
+        "name": "Никитское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -29281,7 +29281,7 @@ export let RussianCities = [
     },
     {
         "id": 522106,
-        "name": "Никицкое",
+        "name": "Никитское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -35941,7 +35941,7 @@ export let RussianCities = [
     },
     {
         "id": 535729,
-        "name": "Коменданцкы аеродром",
+        "name": "Комендантский аеродром",
         "state": "",
         "country": "RU",
         "coord": {
@@ -44781,7 +44781,7 @@ export let RussianCities = [
     },
     {
         "id": 553513,
-        "name": "Каменномосцкое",
+        "name": "Каменномостское",
         "state": "",
         "country": "RU",
         "coord": {
@@ -44791,7 +44791,7 @@ export let RussianCities = [
     },
     {
         "id": 553514,
-        "name": "Каменномосцкий",
+        "name": "Каменномостский",
         "state": "",
         "country": "RU",
         "coord": {
@@ -78891,7 +78891,7 @@ export let RussianCities = [
     },
     {
         "id": 2023468,
-        "name": "Иркуцкая область",
+        "name": "Иркутская область",
         "state": "",
         "country": "RU",
         "coord": {
@@ -78901,7 +78901,7 @@ export let RussianCities = [
     },
     {
         "id": 2023469,
-        "name": "Иркуцк",
+        "name": "Иркутск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -79561,7 +79561,7 @@ export let RussianCities = [
     },
     {
         "id": 2025848,
-        "name": "Буряцкие постройки",
+        "name": "Бурятские постройки",
         "state": "",
         "country": "RU",
         "coord": {
@@ -80371,7 +80371,7 @@ export let RussianCities = [
     },
     {
         "id": 2028164,
-        "name": "Депутацкы",
+        "name": "Депутатский",
         "state": "",
         "country": "RU",
         "coord": {
@@ -80561,7 +80561,7 @@ export let RussianCities = [
     },
     {
         "id": 2051523,
-        "name": "Брацк",
+        "name": "Братск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -80821,7 +80821,7 @@ export let RussianCities = [
     },
     {
         "id": 2115627,
-        "name": "Усть-камчацк старый",
+        "name": "Усть-камчатск старый",
         "state": "",
         "country": "RU",
         "coord": {
@@ -80991,7 +80991,7 @@ export let RussianCities = [
     },
     {
         "id": 2120059,
-        "name": "Усть-камчацк",
+        "name": "Усть-камчатск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -81001,7 +81001,7 @@ export let RussianCities = [
     },
     {
         "id": 2120063,
-        "name": "Усть-большерецк",
+        "name": "Усть-большеретск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -81151,7 +81151,7 @@ export let RussianCities = [
     },
     {
         "id": 2121052,
-        "name": "Совецкая гавань",
+        "name": "Советская гавань",
         "state": "",
         "country": "RU",
         "coord": {
@@ -81301,7 +81301,7 @@ export let RussianCities = [
     },
     {
         "id": 2122104,
-        "name": "Петропавловск-камчацкы",
+        "name": "Петропавловск-камчатский",
         "state": "",
         "country": "RU",
         "coord": {
@@ -81411,7 +81411,7 @@ export let RussianCities = [
     },
     {
         "id": 2122605,
-        "name": "Охоцк",
+        "name": "Охотск",
         "state": "",
         "country": "RU",
         "coord": {
@@ -81821,7 +81821,7 @@ export let RussianCities = [
     },
     {
         "id": 2126099,
-        "name": "Чукоцкий автономный округ",
+        "name": "Чукотский автономный округ",
         "state": "",
         "country": "RU",
         "coord": {
@@ -86261,7 +86261,7 @@ export let RussianCities = [
     },
     {
         "id": 6903642,
-        "name": "Остров брацкая протока",
+        "name": "Остров братская протока",
         "state": "",
         "country": "RU",
         "coord": {
@@ -86851,7 +86851,7 @@ export let RussianCities = [
     },
     {
         "id": 7536078,
-        "name": "Иркуцк",
+        "name": "Иркутск",
         "state": "",
         "country": "RU",
         "coord": {
